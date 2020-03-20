@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="1.0">
+    <entity name="NativeWordEntity" representedClassName="NativeWordEntity" syncable="YES">
+        <attribute name="archive" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="associate" optional="YES" attributeType="String"/>
+        <attribute name="datecreate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="transcription" optional="YES" attributeType="String"/>
+        <attribute name="word" attributeType="String"/>
+        <relationship name="translates" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TranslateWordEntity" inverseName="native" inverseEntity="TranslateWordEntity"/>
+    </entity>
+    <entity name="TranslateWordEntity" representedClassName="TranslateWordEntity" syncable="YES">
+        <attribute name="index" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="translate" attributeType="String"/>
+        <relationship name="native" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NativeWordEntity" inverseName="translates" inverseEntity="NativeWordEntity"/>
+    </entity>
+    <elements>
+        <element name="NativeWordEntity" positionX="-242.7421875" positionY="-160.48046875" width="128" height="133"/>
+        <element name="TranslateWordEntity" positionX="-54" positionY="0" width="128" height="88"/>
+    </elements>
+</model>

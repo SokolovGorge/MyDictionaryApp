@@ -1,0 +1,1008 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		150FCEAB23F487E100D3F903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150FCEA923F487E100D3F903 /* Main.storyboard */; };
+		150FCEAC23F487E100D3F903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 150FCEAA23F487E100D3F903 /* LaunchScreen.storyboard */; };
+		150FCEAF23F48ED100D3F903 /* Localizeble.strings in Resources */ = {isa = PBXBuildFile; fileRef = 150FCEB123F48ED100D3F903 /* Localizeble.strings */; };
+		151D64D0242106C600132F05 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C2242106C500132F05 /* LTMorphingLabel+Evaporate.swift */; };
+		151D64D1242106C600132F05 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C3242106C500132F05 /* LTMorphingLabel+Pixelate.swift */; };
+		151D64D2242106C600132F05 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C4242106C500132F05 /* LTCharacterLimbo.swift */; };
+		151D64D3242106C600132F05 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C5242106C500132F05 /* LTEasing.swift */; };
+		151D64D4242106C600132F05 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C6242106C500132F05 /* LTMorphingLabel.swift */; };
+		151D64D5242106C600132F05 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C7242106C500132F05 /* LTMorphingLabel+Sparkle.swift */; };
+		151D64D6242106C600132F05 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C8242106C500132F05 /* LTMorphingLabel+Burn.swift */; };
+		151D64D7242106C600132F05 /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64C9242106C500132F05 /* LTCharacterDiffResult.swift */; };
+		151D64D8242106C600132F05 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64CA242106C500132F05 /* LTMorphingLabel+Fall.swift */; };
+		151D64D9242106C600132F05 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64CC242106C500132F05 /* LTMorphingEffect.swift */; };
+		151D64DA242106C600132F05 /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64CD242106C500132F05 /* LTStringDiffResult.swift */; };
+		151D64DB242106C600132F05 /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64CE242106C500132F05 /* LTEmitterView.swift */; };
+		151D64DC242106C600132F05 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64CF242106C600132F05 /* LTMorphingLabel+Anvil.swift */; };
+		151D64E1242106D400132F05 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 151D64DD242106D300132F05 /* Smoke.png */; };
+		151D64E2242106D400132F05 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 151D64DE242106D300132F05 /* Fragment.png */; };
+		151D64E3242106D400132F05 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 151D64DF242106D400132F05 /* Fire.png */; };
+		151D64E4242106D400132F05 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 151D64E0242106D400132F05 /* Sparkle.png */; };
+		151D64E624212E0E00132F05 /* TrainingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64E524212E0E00132F05 /* TrainingPresenter.swift */; };
+		151D64E82421368D00132F05 /* TrainingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64E72421368D00132F05 /* TrainingAssembly.swift */; };
+		153CE3C923FC775B00E247E9 /* EditWordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CE3C823FC775B00E247E9 /* EditWordPresenter.swift */; };
+		153CE3CB23FC777D00E247E9 /* EditWordAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CE3CA23FC777D00E247E9 /* EditWordAssembly.swift */; };
+		154B947223F055350092E36E /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B947123F055350092E36E /* DictionaryService.swift */; };
+		154B947423F056410092E36E /* DictionaryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B947323F056410092E36E /* DictionaryImp.swift */; };
+		154B947623F056AE0092E36E /* ServicesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B947523F056AE0092E36E /* ServicesMap.swift */; };
+		154B947823F058230092E36E /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B947723F058230092E36E /* ServicesAssembly.swift */; };
+		1552213923EB445F00A2B5FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1552213823EB445F00A2B5FE /* Images.xcassets */; };
+		155D1A1524084A220076C979 /* ParentPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D1A1424084A220076C979 /* ParentPresenterDelegate.swift */; };
+		155D1A1724084A7A0076C979 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155D1A1624084A7A0076C979 /* BaseViewProtocol.swift */; };
+		155F902623F02BAD00A3FD61 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F902523F02BAD00A3FD61 /* AppConstants.swift */; };
+		155F902923F0300E00A3FD61 /* StyleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155F902823F0300E00A3FD61 /* StyleManager.swift */; };
+		15717AEC23F9ACEA009A17B8 /* DictionaryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15717AEB23F9ACEA009A17B8 /* DictionaryCellView.swift */; };
+		15717AEF23F9DDE7009A17B8 /* EditWordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15717AEE23F9DDE7009A17B8 /* EditWordController.swift */; };
+		1578AF2D23F5D3D80086A1B4 /* DictionaryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1578AF2C23F5D3D80086A1B4 /* DictionaryAssembly.swift */; };
+		1578AF2F23F5D5340086A1B4 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1578AF2E23F5D5340086A1B4 /* DictionaryPresenter.swift */; };
+		1578AF3123F5D76C0086A1B4 /* DictionaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1578AF3023F5D76C0086A1B4 /* DictionaryRouter.swift */; };
+		15AA9E4024181EC900507D1B /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AA9E3F24181EC900507D1B /* UserDefaultManager.swift */; };
+		15B9084223E35EDD00CB8A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B9084123E35EDD00CB8A35 /* AppDelegate.swift */; };
+		15B9084D23E35EDD00CB8A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B9084C23E35EDD00CB8A35 /* Assets.xcassets */; };
+		15B9085B23E35EDD00CB8A35 /* MyDictionaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B9085A23E35EDD00CB8A35 /* MyDictionaryAppTests.swift */; };
+		15BD950323E740AE000CBA4E /* UIAlertController+SBUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950123E740AE000CBA4E /* UIAlertController+SBUtils.swift */; };
+		15BD950423E740AE000CBA4E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950223E740AE000CBA4E /* UIViewController+Alert.swift */; };
+		15BD950923E74137000CBA4E /* SBCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950523E74137000CBA4E /* SBCoreDataService.swift */; };
+		15BD950A23E74137000CBA4E /* NSManagedObject+SBCoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950623E74137000CBA4E /* NSManagedObject+SBCoreStack.swift */; };
+		15BD950B23E74137000CBA4E /* SBCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950723E74137000CBA4E /* SBCoreDataManager.swift */; };
+		15BD950C23E74137000CBA4E /* NSManagedObjectContext+SBCoreStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950823E74137000CBA4E /* NSManagedObjectContext+SBCoreStack.swift */; };
+		15BD950F23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950D23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld */; };
+		15BD951223E745D9000CBA4E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD951123E745D9000CBA4E /* R.generated.swift */; };
+		15C2896D23F32CAA005EF523 /* DictionaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C2896C23F32CAA005EF523 /* DictionaryController.swift */; };
+		15C6BDEC2420183300AF6500 /* TrainingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C6BDEB2420183300AF6500 /* TrainingController.swift */; };
+		15D01E5723F842AD0032D22E /* DictionaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D01E5623F842AD0032D22E /* DictionaryCell.swift */; };
+		15E302A023F0531C0047993D /* NativeWordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029C23F0531C0047993D /* NativeWordEntity+CoreDataClass.swift */; };
+		15E302A123F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029D23F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift */; };
+		15E302A223F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029E23F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift */; };
+		15E302A323F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029F23F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift */; };
+		15FCA48C2416A6E700AACF67 /* TrainingSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA48B2416A6E700AACF67 /* TrainingSettingsController.swift */; };
+		15FCA48E2416B4DF00AACF67 /* TrainingSettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA48D2416B4DF00AACF67 /* TrainingSettingsAssembly.swift */; };
+		15FCA4902416C1E400AACF67 /* TrainingSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA48F2416C1E400AACF67 /* TrainingSettingsPresenter.swift */; };
+		15FCA4922416C2BD00AACF67 /* TrainingSettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA4912416C2BD00AACF67 /* TrainingSettingsRouter.swift */; };
+		D5A3AF066135F802E719821A /* Pods_MyDictionaryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95003AC7C474749893E2ED5F /* Pods_MyDictionaryAppTests.framework */; };
+		EFC6C6A802CEFE4C4767D3C2 /* Pods_MyDictionaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89823FA0970D9DE2303979E7 /* Pods_MyDictionaryApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		15B9085723E35EDD00CB8A35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 15B9083623E35EDD00CB8A35 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 15B9083D23E35EDD00CB8A35;
+			remoteInfo = MyDictionaryApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		150FCEA923F487E100D3F903 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		150FCEAA23F487E100D3F903 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		150FCEB023F48ED100D3F903 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizeble.strings; sourceTree = "<group>"; };
+		150FCEB223F48ED800D3F903 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizeble.strings; sourceTree = "<group>"; };
+		151D64C2242106C500132F05 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		151D64C3242106C500132F05 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		151D64C4242106C500132F05 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		151D64C5242106C500132F05 /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		151D64C6242106C500132F05 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		151D64C7242106C500132F05 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		151D64C8242106C500132F05 /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		151D64C9242106C500132F05 /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		151D64CA242106C500132F05 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		151D64CB242106C500132F05 /* LTMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMorphingLabel.h; sourceTree = "<group>"; };
+		151D64CC242106C500132F05 /* LTMorphingEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingEffect.swift; sourceTree = "<group>"; };
+		151D64CD242106C500132F05 /* LTStringDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTStringDiffResult.swift; sourceTree = "<group>"; };
+		151D64CE242106C500132F05 /* LTEmitterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEmitterView.swift; sourceTree = "<group>"; };
+		151D64CF242106C600132F05 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		151D64DD242106D300132F05 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
+		151D64DE242106D300132F05 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
+		151D64DF242106D400132F05 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		151D64E0242106D400132F05 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		151D64E524212E0E00132F05 /* TrainingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPresenter.swift; sourceTree = "<group>"; };
+		151D64E72421368D00132F05 /* TrainingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAssembly.swift; sourceTree = "<group>"; };
+		153CE3C823FC775B00E247E9 /* EditWordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWordPresenter.swift; sourceTree = "<group>"; };
+		153CE3CA23FC777D00E247E9 /* EditWordAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWordAssembly.swift; sourceTree = "<group>"; };
+		154B947123F055350092E36E /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
+		154B947323F056410092E36E /* DictionaryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryImp.swift; sourceTree = "<group>"; };
+		154B947523F056AE0092E36E /* ServicesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMap.swift; sourceTree = "<group>"; };
+		154B947723F058230092E36E /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		1552213823EB445F00A2B5FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		155D1A1424084A220076C979 /* ParentPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPresenterDelegate.swift; sourceTree = "<group>"; };
+		155D1A1624084A7A0076C979 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		155F902523F02BAD00A3FD61 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		155F902823F0300E00A3FD61 /* StyleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleManager.swift; sourceTree = "<group>"; };
+		15717AEB23F9ACEA009A17B8 /* DictionaryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCellView.swift; sourceTree = "<group>"; };
+		15717AEE23F9DDE7009A17B8 /* EditWordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWordController.swift; sourceTree = "<group>"; };
+		1578AF2C23F5D3D80086A1B4 /* DictionaryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembly.swift; sourceTree = "<group>"; };
+		1578AF2E23F5D5340086A1B4 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
+		1578AF3023F5D76C0086A1B4 /* DictionaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryRouter.swift; sourceTree = "<group>"; };
+		15AA9E3F24181EC900507D1B /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		15B9083E23E35EDD00CB8A35 /* Мой словарь.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Мой словарь.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B9084123E35EDD00CB8A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		15B9084C23E35EDD00CB8A35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		15B9085123E35EDD00CB8A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15B9085623E35EDD00CB8A35 /* MyDictionaryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDictionaryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		15B9085A23E35EDD00CB8A35 /* MyDictionaryAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDictionaryAppTests.swift; sourceTree = "<group>"; };
+		15B9085C23E35EDD00CB8A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BD950123E740AE000CBA4E /* UIAlertController+SBUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SBUtils.swift"; sourceTree = "<group>"; };
+		15BD950223E740AE000CBA4E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		15BD950523E74137000CBA4E /* SBCoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataService.swift; sourceTree = "<group>"; };
+		15BD950623E74137000CBA4E /* NSManagedObject+SBCoreStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+SBCoreStack.swift"; sourceTree = "<group>"; };
+		15BD950723E74137000CBA4E /* SBCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataManager.swift; sourceTree = "<group>"; };
+		15BD950823E74137000CBA4E /* NSManagedObjectContext+SBCoreStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+SBCoreStack.swift"; sourceTree = "<group>"; };
+		15BD950E23E74220000CBA4E /* MyDictionaryApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDictionaryApp.xcdatamodel; sourceTree = "<group>"; };
+		15BD951123E745D9000CBA4E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = MyDictionaryApp/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		15C2896C23F32CAA005EF523 /* DictionaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryController.swift; sourceTree = "<group>"; };
+		15C6BDEB2420183300AF6500 /* TrainingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingController.swift; sourceTree = "<group>"; };
+		15D01E5623F842AD0032D22E /* DictionaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCell.swift; sourceTree = "<group>"; };
+		15E3029C23F0531C0047993D /* NativeWordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeWordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15E3029D23F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeWordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15E3029E23F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslateWordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		15E3029F23F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslateWordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15FCA48B2416A6E700AACF67 /* TrainingSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsController.swift; sourceTree = "<group>"; };
+		15FCA48D2416B4DF00AACF67 /* TrainingSettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsAssembly.swift; sourceTree = "<group>"; };
+		15FCA48F2416C1E400AACF67 /* TrainingSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsPresenter.swift; sourceTree = "<group>"; };
+		15FCA4912416C2BD00AACF67 /* TrainingSettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsRouter.swift; sourceTree = "<group>"; };
+		1FBB0072B43F141D10F3D513 /* Pods-MyDictionaryAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryAppTests.release.xcconfig"; path = "Target Support Files/Pods-MyDictionaryAppTests/Pods-MyDictionaryAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		39A55BD4F80C7E4322CFFFDB /* Pods-MyDictionaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryApp.release.xcconfig"; path = "Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp.release.xcconfig"; sourceTree = "<group>"; };
+		523B45D264600A69E34576CA /* Pods-MyDictionaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryApp.debug.xcconfig"; path = "Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		89823FA0970D9DE2303979E7 /* Pods_MyDictionaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDictionaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95003AC7C474749893E2ED5F /* Pods_MyDictionaryAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyDictionaryAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E771718EDAC6BED926F6AA55 /* Pods-MyDictionaryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyDictionaryAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MyDictionaryAppTests/Pods-MyDictionaryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		15B9083B23E35EDD00CB8A35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFC6C6A802CEFE4C4767D3C2 /* Pods_MyDictionaryApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15B9085323E35EDD00CB8A35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5A3AF066135F802E719821A /* Pods_MyDictionaryAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		150FCEA823F4877B00D3F903 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				150FCEA923F487E100D3F903 /* Main.storyboard */,
+				150FCEAA23F487E100D3F903 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		151D64BF242105DB00132F05 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				151D64C02421061000132F05 /* LTMorphingLabel */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		151D64C02421061000132F05 /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				151D64C9242106C500132F05 /* LTCharacterDiffResult.swift */,
+				151D64C4242106C500132F05 /* LTCharacterLimbo.swift */,
+				151D64C5242106C500132F05 /* LTEasing.swift */,
+				151D64CE242106C500132F05 /* LTEmitterView.swift */,
+				151D64CC242106C500132F05 /* LTMorphingEffect.swift */,
+				151D64CB242106C500132F05 /* LTMorphingLabel.h */,
+				151D64C6242106C500132F05 /* LTMorphingLabel.swift */,
+				151D64CF242106C600132F05 /* LTMorphingLabel+Anvil.swift */,
+				151D64C8242106C500132F05 /* LTMorphingLabel+Burn.swift */,
+				151D64C2242106C500132F05 /* LTMorphingLabel+Evaporate.swift */,
+				151D64CA242106C500132F05 /* LTMorphingLabel+Fall.swift */,
+				151D64C3242106C500132F05 /* LTMorphingLabel+Pixelate.swift */,
+				151D64C7242106C500132F05 /* LTMorphingLabel+Sparkle.swift */,
+				151D64CD242106C500132F05 /* LTStringDiffResult.swift */,
+				151D64C12421069000132F05 /* Particles */,
+			);
+			path = LTMorphingLabel;
+			sourceTree = "<group>";
+		};
+		151D64C12421069000132F05 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				151D64DF242106D400132F05 /* Fire.png */,
+				151D64DE242106D300132F05 /* Fragment.png */,
+				151D64DD242106D300132F05 /* Smoke.png */,
+				151D64E0242106D400132F05 /* Sparkle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		154B947023F054F30092E36E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				154B947123F055350092E36E /* DictionaryService.swift */,
+				154B947323F056410092E36E /* DictionaryImp.swift */,
+				154B947523F056AE0092E36E /* ServicesMap.swift */,
+				154B947723F058230092E36E /* ServicesAssembly.swift */,
+				15AA9E3F24181EC900507D1B /* UserDefaultManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		155D1A13240849FF0076C979 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				155D1A1424084A220076C979 /* ParentPresenterDelegate.swift */,
+				155D1A1624084A7A0076C979 /* BaseViewProtocol.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		155F902423F02B7600A3FD61 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				155F902523F02BAD00A3FD61 /* AppConstants.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		155F902723F02FEF00A3FD61 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				155F902823F0300E00A3FD61 /* StyleManager.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		15717AED23F9DDA8009A17B8 /* EditWord */ = {
+			isa = PBXGroup;
+			children = (
+				15717AEE23F9DDE7009A17B8 /* EditWordController.swift */,
+				153CE3C823FC775B00E247E9 /* EditWordPresenter.swift */,
+				153CE3CA23FC777D00E247E9 /* EditWordAssembly.swift */,
+			);
+			path = EditWord;
+			sourceTree = "<group>";
+		};
+		15B9083523E35EDD00CB8A35 = {
+			isa = PBXGroup;
+			children = (
+				15B9084023E35EDD00CB8A35 /* MyDictionaryApp */,
+				15B9085923E35EDD00CB8A35 /* MyDictionaryAppTests */,
+				15B9083F23E35EDD00CB8A35 /* Products */,
+				67D6D083A819347E5A943C85 /* Pods */,
+				E4ABCFEBE7BFF1BCB0A59E16 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		15B9083F23E35EDD00CB8A35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				15B9083E23E35EDD00CB8A35 /* Мой словарь.app */,
+				15B9085623E35EDD00CB8A35 /* MyDictionaryAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		15B9084023E35EDD00CB8A35 /* MyDictionaryApp */ = {
+			isa = PBXGroup;
+			children = (
+				151D64BF242105DB00132F05 /* Libraries */,
+				15B9084123E35EDD00CB8A35 /* AppDelegate.swift */,
+				154B947023F054F30092E36E /* Services */,
+				15BD94F923E73F55000CBA4E /* UI */,
+				15BD94FC23E73FA8000CBA4E /* Resources */,
+				15BD94FE23E74009000CBA4E /* DOM */,
+				150FCEA823F4877B00D3F903 /* Storyboards */,
+				155F902423F02B7600A3FD61 /* System */,
+				15BD950023E74033000CBA4E /* Extentions */,
+				15BD94FD23E73FD5000CBA4E /* SupportingFiles */,
+			);
+			path = MyDictionaryApp;
+			sourceTree = "<group>";
+		};
+		15B9085923E35EDD00CB8A35 /* MyDictionaryAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				15B9085A23E35EDD00CB8A35 /* MyDictionaryAppTests.swift */,
+				15B9085C23E35EDD00CB8A35 /* Info.plist */,
+			);
+			path = MyDictionaryAppTests;
+			sourceTree = "<group>";
+		};
+		15BD94F923E73F55000CBA4E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				155F902723F02FEF00A3FD61 /* Style */,
+				15BD94FA23E73F60000CBA4E /* ViewControllers */,
+				15D01E5523F837C10032D22E /* Cells */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		15BD94FA23E73F60000CBA4E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				155D1A13240849FF0076C979 /* Common */,
+				15C2896923F32BD2005EF523 /* Dictionary */,
+				15717AED23F9DDA8009A17B8 /* EditWord */,
+				15C6BDEA242017F400AF6500 /* Training */,
+				15FCA48A2416A68300AACF67 /* Settings */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		15BD94FC23E73FA8000CBA4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15B9084C23E35EDD00CB8A35 /* Assets.xcassets */,
+				1552213823EB445F00A2B5FE /* Images.xcassets */,
+				150FCEB123F48ED100D3F903 /* Localizeble.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15BD94FD23E73FD5000CBA4E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				15B9085123E35EDD00CB8A35 /* Info.plist */,
+				15BD951123E745D9000CBA4E /* R.generated.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		15BD94FE23E74009000CBA4E /* DOM */ = {
+			isa = PBXGroup;
+			children = (
+				15BD950623E74137000CBA4E /* NSManagedObject+SBCoreStack.swift */,
+				15BD950823E74137000CBA4E /* NSManagedObjectContext+SBCoreStack.swift */,
+				15BD950723E74137000CBA4E /* SBCoreDataManager.swift */,
+				15BD950523E74137000CBA4E /* SBCoreDataService.swift */,
+				15BD950D23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld */,
+				15BD94FF23E7401B000CBA4E /* Entities */,
+			);
+			path = DOM;
+			sourceTree = "<group>";
+		};
+		15BD94FF23E7401B000CBA4E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				15E3029C23F0531C0047993D /* NativeWordEntity+CoreDataClass.swift */,
+				15E3029D23F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift */,
+				15E3029E23F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift */,
+				15E3029F23F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		15BD950023E74033000CBA4E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				15BD950123E740AE000CBA4E /* UIAlertController+SBUtils.swift */,
+				15BD950223E740AE000CBA4E /* UIViewController+Alert.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		15C2896923F32BD2005EF523 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				15C2896C23F32CAA005EF523 /* DictionaryController.swift */,
+				1578AF2C23F5D3D80086A1B4 /* DictionaryAssembly.swift */,
+				1578AF2E23F5D5340086A1B4 /* DictionaryPresenter.swift */,
+				1578AF3023F5D76C0086A1B4 /* DictionaryRouter.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		15C6BDEA242017F400AF6500 /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				15C6BDEB2420183300AF6500 /* TrainingController.swift */,
+				151D64E524212E0E00132F05 /* TrainingPresenter.swift */,
+				151D64E72421368D00132F05 /* TrainingAssembly.swift */,
+			);
+			path = Training;
+			sourceTree = "<group>";
+		};
+		15D01E5523F837C10032D22E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				15717AEB23F9ACEA009A17B8 /* DictionaryCellView.swift */,
+				15D01E5623F842AD0032D22E /* DictionaryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		15FCA48A2416A68300AACF67 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				15FCA48B2416A6E700AACF67 /* TrainingSettingsController.swift */,
+				15FCA48D2416B4DF00AACF67 /* TrainingSettingsAssembly.swift */,
+				15FCA48F2416C1E400AACF67 /* TrainingSettingsPresenter.swift */,
+				15FCA4912416C2BD00AACF67 /* TrainingSettingsRouter.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		67D6D083A819347E5A943C85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				523B45D264600A69E34576CA /* Pods-MyDictionaryApp.debug.xcconfig */,
+				39A55BD4F80C7E4322CFFFDB /* Pods-MyDictionaryApp.release.xcconfig */,
+				E771718EDAC6BED926F6AA55 /* Pods-MyDictionaryAppTests.debug.xcconfig */,
+				1FBB0072B43F141D10F3D513 /* Pods-MyDictionaryAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E4ABCFEBE7BFF1BCB0A59E16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89823FA0970D9DE2303979E7 /* Pods_MyDictionaryApp.framework */,
+				95003AC7C474749893E2ED5F /* Pods_MyDictionaryAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		15B9083D23E35EDD00CB8A35 /* MyDictionaryApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15B9085F23E35EDD00CB8A35 /* Build configuration list for PBXNativeTarget "MyDictionaryApp" */;
+			buildPhases = (
+				32F8A2AFE935BBA89F7C0B10 /* [CP] Check Pods Manifest.lock */,
+				15BD951023E7428C000CBA4E /* ShellScript */,
+				15B9083A23E35EDD00CB8A35 /* Sources */,
+				15B9083B23E35EDD00CB8A35 /* Frameworks */,
+				15B9083C23E35EDD00CB8A35 /* Resources */,
+				15BD951323E7487D000CBA4E /* ShellScript */,
+				BDFB6AAC112A3A5D71C4901B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyDictionaryApp;
+			productName = MyDictionaryApp;
+			productReference = 15B9083E23E35EDD00CB8A35 /* Мой словарь.app */;
+			productType = "com.apple.product-type.application";
+		};
+		15B9085523E35EDD00CB8A35 /* MyDictionaryAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15B9086223E35EDD00CB8A35 /* Build configuration list for PBXNativeTarget "MyDictionaryAppTests" */;
+			buildPhases = (
+				A935BFA0517C4F4C62D0C2D3 /* [CP] Check Pods Manifest.lock */,
+				15B9085223E35EDD00CB8A35 /* Sources */,
+				15B9085323E35EDD00CB8A35 /* Frameworks */,
+				15B9085423E35EDD00CB8A35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15B9085823E35EDD00CB8A35 /* PBXTargetDependency */,
+			);
+			name = MyDictionaryAppTests;
+			productName = MyDictionaryAppTests;
+			productReference = 15B9085623E35EDD00CB8A35 /* MyDictionaryAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		15B9083623E35EDD00CB8A35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Соколов Георгий";
+				TargetAttributes = {
+					15B9083D23E35EDD00CB8A35 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					15B9085523E35EDD00CB8A35 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 15B9083D23E35EDD00CB8A35;
+					};
+				};
+			};
+			buildConfigurationList = 15B9083923E35EDD00CB8A35 /* Build configuration list for PBXProject "MyDictionaryApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+				Base,
+			);
+			mainGroup = 15B9083523E35EDD00CB8A35;
+			productRefGroup = 15B9083F23E35EDD00CB8A35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				15B9083D23E35EDD00CB8A35 /* MyDictionaryApp */,
+				15B9085523E35EDD00CB8A35 /* MyDictionaryAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		15B9083C23E35EDD00CB8A35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151D64E4242106D400132F05 /* Sparkle.png in Resources */,
+				151D64E2242106D400132F05 /* Fragment.png in Resources */,
+				151D64E3242106D400132F05 /* Fire.png in Resources */,
+				150FCEAB23F487E100D3F903 /* Main.storyboard in Resources */,
+				150FCEAC23F487E100D3F903 /* LaunchScreen.storyboard in Resources */,
+				1552213923EB445F00A2B5FE /* Images.xcassets in Resources */,
+				150FCEAF23F48ED100D3F903 /* Localizeble.strings in Resources */,
+				15B9084D23E35EDD00CB8A35 /* Assets.xcassets in Resources */,
+				151D64E1242106D400132F05 /* Smoke.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15B9085423E35EDD00CB8A35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15BD951023E7428C000CBA4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/MyDictionaryApp/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/MyDictionaryApp/R.generated.swift\"\n";
+		};
+		15BD951323E7487D000CBA4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 10d651211a96e0bb68832a85ff48a8672276b11e d0ecfc451a5260d62c367cc7ff4f90b0763e19e32d99f8919c9bcfd647ce8836\n";
+		};
+		32F8A2AFE935BBA89F7C0B10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyDictionaryApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A935BFA0517C4F4C62D0C2D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyDictionaryAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDFB6AAC112A3A5D71C4901B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyDictionaryApp/Pods-MyDictionaryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		15B9083A23E35EDD00CB8A35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15BD950423E740AE000CBA4E /* UIViewController+Alert.swift in Sources */,
+				15E302A323F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift in Sources */,
+				15B9084223E35EDD00CB8A35 /* AppDelegate.swift in Sources */,
+				153CE3CB23FC777D00E247E9 /* EditWordAssembly.swift in Sources */,
+				15BD950A23E74137000CBA4E /* NSManagedObject+SBCoreStack.swift in Sources */,
+				15BD950323E740AE000CBA4E /* UIAlertController+SBUtils.swift in Sources */,
+				151D64E624212E0E00132F05 /* TrainingPresenter.swift in Sources */,
+				15FCA48E2416B4DF00AACF67 /* TrainingSettingsAssembly.swift in Sources */,
+				151D64D6242106C600132F05 /* LTMorphingLabel+Burn.swift in Sources */,
+				15BD950B23E74137000CBA4E /* SBCoreDataManager.swift in Sources */,
+				15E302A123F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift in Sources */,
+				15FCA4922416C2BD00AACF67 /* TrainingSettingsRouter.swift in Sources */,
+				151D64E82421368D00132F05 /* TrainingAssembly.swift in Sources */,
+				15C2896D23F32CAA005EF523 /* DictionaryController.swift in Sources */,
+				15BD950F23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld in Sources */,
+				154B947623F056AE0092E36E /* ServicesMap.swift in Sources */,
+				15FCA48C2416A6E700AACF67 /* TrainingSettingsController.swift in Sources */,
+				151D64D2242106C600132F05 /* LTCharacterLimbo.swift in Sources */,
+				151D64D8242106C600132F05 /* LTMorphingLabel+Fall.swift in Sources */,
+				15BD950923E74137000CBA4E /* SBCoreDataService.swift in Sources */,
+				151D64D3242106C600132F05 /* LTEasing.swift in Sources */,
+				15C6BDEC2420183300AF6500 /* TrainingController.swift in Sources */,
+				15717AEC23F9ACEA009A17B8 /* DictionaryCellView.swift in Sources */,
+				154B947823F058230092E36E /* ServicesAssembly.swift in Sources */,
+				1578AF3123F5D76C0086A1B4 /* DictionaryRouter.swift in Sources */,
+				15FCA4902416C1E400AACF67 /* TrainingSettingsPresenter.swift in Sources */,
+				151D64D0242106C600132F05 /* LTMorphingLabel+Evaporate.swift in Sources */,
+				154B947223F055350092E36E /* DictionaryService.swift in Sources */,
+				155D1A1524084A220076C979 /* ParentPresenterDelegate.swift in Sources */,
+				1578AF2D23F5D3D80086A1B4 /* DictionaryAssembly.swift in Sources */,
+				151D64D4242106C600132F05 /* LTMorphingLabel.swift in Sources */,
+				151D64D5242106C600132F05 /* LTMorphingLabel+Sparkle.swift in Sources */,
+				1578AF2F23F5D5340086A1B4 /* DictionaryPresenter.swift in Sources */,
+				153CE3C923FC775B00E247E9 /* EditWordPresenter.swift in Sources */,
+				151D64D7242106C600132F05 /* LTCharacterDiffResult.swift in Sources */,
+				15D01E5723F842AD0032D22E /* DictionaryCell.swift in Sources */,
+				15BD951223E745D9000CBA4E /* R.generated.swift in Sources */,
+				151D64DB242106C600132F05 /* LTEmitterView.swift in Sources */,
+				15717AEF23F9DDE7009A17B8 /* EditWordController.swift in Sources */,
+				15E302A223F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift in Sources */,
+				151D64DC242106C600132F05 /* LTMorphingLabel+Anvil.swift in Sources */,
+				155F902923F0300E00A3FD61 /* StyleManager.swift in Sources */,
+				154B947423F056410092E36E /* DictionaryImp.swift in Sources */,
+				151D64DA242106C600132F05 /* LTStringDiffResult.swift in Sources */,
+				151D64D1242106C600132F05 /* LTMorphingLabel+Pixelate.swift in Sources */,
+				15BD950C23E74137000CBA4E /* NSManagedObjectContext+SBCoreStack.swift in Sources */,
+				155D1A1724084A7A0076C979 /* BaseViewProtocol.swift in Sources */,
+				151D64D9242106C600132F05 /* LTMorphingEffect.swift in Sources */,
+				155F902623F02BAD00A3FD61 /* AppConstants.swift in Sources */,
+				15E302A023F0531C0047993D /* NativeWordEntity+CoreDataClass.swift in Sources */,
+				15AA9E4024181EC900507D1B /* UserDefaultManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15B9085223E35EDD00CB8A35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15B9085B23E35EDD00CB8A35 /* MyDictionaryAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15B9085823E35EDD00CB8A35 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 15B9083D23E35EDD00CB8A35 /* MyDictionaryApp */;
+			targetProxy = 15B9085723E35EDD00CB8A35 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		150FCEB123F48ED100D3F903 /* Localizeble.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				150FCEB023F48ED100D3F903 /* en */,
+				150FCEB223F48ED800D3F903 /* ru */,
+			);
+			name = Localizeble.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		15B9085D23E35EDD00CB8A35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		15B9085E23E35EDD00CB8A35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15B9086023E35EDD00CB8A35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523B45D264600A69E34576CA /* Pods-MyDictionaryApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS2NM2CT2U;
+				INFOPLIST_FILE = MyDictionaryApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D AUTOMIGRATION";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sbsoft.MyDictionaryApp;
+				PRODUCT_NAME = "Мой словарь";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		15B9086123E35EDD00CB8A35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39A55BD4F80C7E4322CFFFDB /* Pods-MyDictionaryApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS2NM2CT2U;
+				INFOPLIST_FILE = MyDictionaryApp/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D AUTOMIGRATION";
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sbsoft.MyDictionaryApp;
+				PRODUCT_NAME = "Мой словарь";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		15B9086323E35EDD00CB8A35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E771718EDAC6BED926F6AA55 /* Pods-MyDictionaryAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS2NM2CT2U;
+				INFOPLIST_FILE = MyDictionaryAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sbsoft.MyDictionaryAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDictionaryApp.app/MyDictionaryApp";
+			};
+			name = Debug;
+		};
+		15B9086423E35EDD00CB8A35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FBB0072B43F141D10F3D513 /* Pods-MyDictionaryAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XS2NM2CT2U;
+				INFOPLIST_FILE = MyDictionaryAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.sbsoft.MyDictionaryAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyDictionaryApp.app/MyDictionaryApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15B9083923E35EDD00CB8A35 /* Build configuration list for PBXProject "MyDictionaryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B9085D23E35EDD00CB8A35 /* Debug */,
+				15B9085E23E35EDD00CB8A35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15B9085F23E35EDD00CB8A35 /* Build configuration list for PBXNativeTarget "MyDictionaryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B9086023E35EDD00CB8A35 /* Debug */,
+				15B9086123E35EDD00CB8A35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15B9086223E35EDD00CB8A35 /* Build configuration list for PBXNativeTarget "MyDictionaryAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15B9086323E35EDD00CB8A35 /* Debug */,
+				15B9086423E35EDD00CB8A35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		15BD950D23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				15BD950E23E74220000CBA4E /* MyDictionaryApp.xcdatamodel */,
+			);
+			currentVersion = 15BD950E23E74220000CBA4E /* MyDictionaryApp.xcdatamodel */;
+			path = MyDictionaryApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 15B9083623E35EDD00CB8A35 /* Project object */;
+}
