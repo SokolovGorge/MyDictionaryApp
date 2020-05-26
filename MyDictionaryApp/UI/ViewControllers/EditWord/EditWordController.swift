@@ -106,8 +106,9 @@ class EditWordController: UIViewController {
     //MARK: - Actions
         
     @IBAction func saveAction(_ sender: UIBarButtonItem) {
-        presenter.saveData()
-        self.navigationController?.popViewController(animated: true)
+        if presenter.saveData() {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
 

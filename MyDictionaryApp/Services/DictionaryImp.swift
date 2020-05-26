@@ -13,7 +13,7 @@ class DictionaryImp: DictionaryService {
     
     func getAllNativeWords() -> [NativeWordEntity] {
         var result: [NativeWordEntity]!
-        SBCoreDataManager.sharedInstance.performSync { (context) in
+        SBCoreDataManager.shared.performSync { (context) in
             let request = NSFetchRequest<NativeWordEntity>(entityName: NativeWordEntity.className())
             let sort = NSSortDescriptor(keyPath: \NativeWordEntity.word, ascending: true)
             request.sortDescriptors = [sort]
@@ -30,7 +30,7 @@ class DictionaryImp: DictionaryService {
     
     func getNativeWords(startWith beginLetters: String) -> [NativeWordEntity] {
         var result: [NativeWordEntity]!
-        SBCoreDataManager.sharedInstance.performSync { (context) in
+        SBCoreDataManager.shared.performSync { (context) in
             let request = NSFetchRequest<NativeWordEntity>(entityName: NativeWordEntity.className())
             let sort = NSSortDescriptor(keyPath: \NativeWordEntity.word, ascending: true)
             request.sortDescriptors = [sort]
@@ -48,7 +48,7 @@ class DictionaryImp: DictionaryService {
     
     func getNativeWords(from date: Date?) -> [NativeWordEntity] {
         var result: [NativeWordEntity]!
-        SBCoreDataManager.sharedInstance.performSync { (context) in
+        SBCoreDataManager.shared.performSync { (context) in
             let request = NSFetchRequest<NativeWordEntity>(entityName: NativeWordEntity.className())
             if let date = date {
                 request.predicate = NSPredicate(format: "datecreate > %@ AND archive == %@", date as NSDate, NSNumber(value: false))
@@ -64,6 +64,26 @@ class DictionaryImp: DictionaryService {
         }
         return result
     }
+    
+    func isExistsWord(_ word: String, id: NSManagedObjectID?) -> Bool {
+        var result: Bool!
+        SBCoreDataManager.shared.performSync { (context) in
+            let request = NSFetchRequest<NativeWordEntity>(entityName: NativeWordEntity.className())
+            if let id = id, !id.isTemporaryID {
+                request.predicate = NSPredicate(format: "word == %@ AND self != %@", word.lowercased(), id)
+            } else {
+                request.predicate = NSPredicate(format: "word == %@", word.lowercased())
+            }
+            do {
+                result = try context.fetch(request).count > 0
+            } catch {
+                fatalError("isExistsWord error: \(error)")
+            }
+        }
+        return result
+    }
+    
+    
     
     
 }

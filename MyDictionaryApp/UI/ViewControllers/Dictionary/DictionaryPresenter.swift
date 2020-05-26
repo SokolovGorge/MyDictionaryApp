@@ -11,11 +11,17 @@ import CoreData
 
 protocol DictionaryPresenter {
     
+    func getNumberSections() -> Int
+    
     func getCountInSection(_ section: Int) -> Int
     
     func updateData(byFilter filter:String)
     
+    func getTitleSection(_ section: Int) -> String?
+    
     func configure(cell: DictionaryCellView, for indexPath: IndexPath)
+    
+    func sectionIndexTitles() -> [String]
     
     func deleteRow(at indexPath: IndexPath)
     
@@ -38,6 +44,10 @@ protocol DictionaryView: BaseViewProtocol {
     func beginUpdates()
     
     func endUpdates()
+    
+    func insertSection(at sectionIndex: Int)
+    
+    func deleteSection(at sectionIndex: Int)
     
     func insertRow(at indexPath: IndexPath)
     
@@ -66,9 +76,18 @@ class DictionaryPresenterImp: NSObject, DictionaryPresenter {
     
     //MARK: DictionaryPresenter
     
+    func getNumberSections() -> Int {
+        return fetchResultController.sections?.count ?? 0
+    }
+    
     func getCountInSection(_ section: Int) -> Int{
         guard let sections = fetchResultController.sections else {return 0}
         return sections[section].numberOfObjects
+    }
+    
+    func getTitleSection(_ section: Int) -> String?{
+        guard let sections = fetchResultController.sections else {return nil}
+        return sections[section].name
     }
     
     func updateData(byFilter filter:String) {
@@ -84,7 +103,7 @@ class DictionaryPresenterImp: NSObject, DictionaryPresenter {
         }
         request.fetchBatchSize = 20
         request.relationshipKeyPathsForPrefetching = ["translates"]
-        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: SBCoreDataManager.sharedInstance.mainTemplateContext(), sectionNameKeyPath: nil, cacheName: nil)
+        let controller = NSFetchedResultsController(fetchRequest: request, managedObjectContext: SBCoreDataManager.shared.mainTemplateContext(), sectionNameKeyPath: "section", cacheName: nil)
         self.fetchResultController = controller
         controller.delegate = self
         do {
@@ -111,6 +130,10 @@ class DictionaryPresenterImp: NSObject, DictionaryPresenter {
             cell.displayTranslate(translate: translates[0].translate!)
         }
         cell.displayArchive(archive: wordEntity.archive)
+    }
+    
+    func sectionIndexTitles() -> [String] {
+        return fetchResultController.sectionIndexTitles
     }
     
     func deleteRow(at indexPath: IndexPath) {
@@ -141,13 +164,13 @@ class DictionaryPresenterImp: NSObject, DictionaryPresenter {
     func setAcrhive(_ archive: Bool, at indexPath: IndexPath) {
         let entity = getItem(at: indexPath)
         entity.archive = archive
-        _ = SBCoreDataManager.sharedInstance.saveMainTemplateContext()
+        _ = SBCoreDataManager.shared.saveMainTemplateContext()
     }
     
     func deleteItem(at indexPath: IndexPath) {
         let entity = getItem(at: indexPath)
-        SBCoreDataManager.sharedInstance.mainTemplateContext().delete(entity)
-        _ = SBCoreDataManager.sharedInstance.saveMainTemplateContext()
+        SBCoreDataManager.shared.mainTemplateContext().delete(entity)
+        _ = SBCoreDataManager.shared.saveMainTemplateContext()
     }
 
 }
@@ -164,6 +187,17 @@ extension DictionaryPresenterImp: NSFetchedResultsControllerDelegate {
         view.endUpdates()
     }
     
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        switch type {
+        case .insert:
+            view.insertSection(at: sectionIndex)
+        case .delete:
+            view.deleteSection(at: sectionIndex)
+        default:
+            break
+        }
+    }
+
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
@@ -184,6 +218,5 @@ extension DictionaryPresenterImp: NSFetchedResultsControllerDelegate {
             break
         }
     }
-    
 }
 

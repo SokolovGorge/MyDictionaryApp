@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 protocol DictionaryService {
     
@@ -14,6 +15,8 @@ protocol DictionaryService {
     
     func getNativeWords(startWith beginLetters: String) -> [NativeWordEntity]
     
-    func getNativeWords(from date: Date?) -> [NativeWordEntity] 
+    func getNativeWords(from date: Date?) -> [NativeWordEntity]
+    
+    func isExistsWord(_ word: String, id: NSManagedObjectID?) -> Bool
     
 }

@@ -20,6 +20,7 @@ extension NativeWordEntity {
     @NSManaged public var associate: String?
     @NSManaged public var datecreate: Date?
     @NSManaged public var transcription: String?
+    @NSManaged public var section: String?
     @NSManaged public var word: String?
     @NSManaged public var archive: Bool
     @NSManaged public var translates: NSSet?

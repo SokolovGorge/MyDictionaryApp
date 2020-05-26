@@ -27,7 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #endif
         
         Fabric.with([Crashlytics.self])
-        SBCoreDataManager.initStack(name: "MyDictionaryApp")
+        
+        #if !AUTOMIGRATION
+        
+        if SBCoreDataManager.shared.isMigrationNeeded() {
+            print("MIGRATION NEED!")
+            SBCoreDataManager.shared.migrate()
+        }
+        
+        #endif
+        
+        SBCoreDataManager.shared.initStack()
         
         StyleManager.applyStyles()
         window = UIWindow.init(frame: UIScreen.main.bounds)

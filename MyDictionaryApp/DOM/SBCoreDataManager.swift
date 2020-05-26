@@ -6,50 +6,33 @@
 //  Copyright © 2018 Соколов Георгий. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 
-class SBCoreDataManager: SBCoreDataService {    
+class SBCoreDataManager: NSObject,  SBCoreDataService, HBMigrationManagerDelegate {
+        
+    private let modelName = AppConstants.nameStorage
     
-    private static var _instance: SBCoreDataManager?
+    private var managedObjectModel: NSManagedObjectModel!
+    private var persistentStoreCoordinator: NSPersistentStoreCoordinator!
+    private var rootContext: NSManagedObjectContext!
+    private var defaultContext: NSManagedObjectContext!
     
-    private var modelName: String
+    private(set) var isActive: Bool
     
-    private var managedObjectModel: NSManagedObjectModel
-    private var persistentStoreCoordinator: NSPersistentStoreCoordinator
-    private var rootContext: NSManagedObjectContext
-    private var defaultContext: NSManagedObjectContext
-    
-    static var sharedInstance: SBCoreDataManager {
-        guard let instance = _instance else {
-            fatalError("Call initStack")
+    static var shared: SBCoreDataManager {
+        struct Holder {
+            static let instance = SBCoreDataManager()
         }
-        return instance
+        return Holder.instance
     }
     
-    static func initStack(name: String) {
-        if _instance != nil {
+    func initStack() {
+        if isActive {
             fatalError("Core Data stack already exists")
         }
-        _instance = SBCoreDataManager(name: name)
-    }
-    
-    fileprivate init(name: String) {
-        modelName = name
-        
-        var modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")
-        if (modelURL == nil) {
-            modelURL = Bundle.main.url(forResource: modelName, withExtension: "mom")
-        }
-        guard let url = modelURL else {
-            fatalError("Unable to Find Data Model")
-        }
-        
-        guard let model = NSManagedObjectModel(contentsOf: url) else {
-            fatalError("Unable to Load Data Model")
-        }
-        managedObjectModel = model
+        managedObjectModel = getManagedObjectModel()
         
         let storeName = "\(modelName).sqlite"
         // для использования одним инстансом
@@ -85,7 +68,6 @@ class SBCoreDataManager: SBCoreDataService {
         rootContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
         rootContext.persistentStoreCoordinator = persistentStoreCoordinator;
         defaultContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
-        
         rootContext.perform {
             self.addObtainPermanentIDsBeforeSaving(context: self.rootContext)
             self.rootContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
@@ -98,6 +80,13 @@ class SBCoreDataManager: SBCoreDataService {
                                                object: rootContext)
         
         
+        isActive = true
+        
+    }
+    
+    fileprivate override init() {
+        isActive = false
+        super.init()
     }
     
     func performSync(_ block: @escaping (_ context: NSManagedObjectContext) -> Void) {
@@ -221,7 +210,60 @@ class SBCoreDataManager: SBCoreDataService {
         }
     }
     
+    func migrate() {
+        var bgTask : UIBackgroundTaskIdentifier = .invalid
+        bgTask = UIApplication.shared.beginBackgroundTask {
+            UIApplication.shared.endBackgroundTask(bgTask)
+            bgTask = .invalid
+        }
+        
+        let migrateManager = HBMigrationManager()
+        migrateManager.delegate = self
+        do {
+            try migrateManager.progressivelyMigrateURL(self.sourceStoreURL(),
+                                                        ofType: self.sourceStoreType(),
+                                                        to: self.managedObjectModel)
+            print("Migrate complite")
+        } catch {
+            print("Error migrate: \(error)")
+        }
+        
+        UIApplication.shared.endBackgroundTask(bgTask)
+        bgTask = .invalid
+    }
+    
+    func isMigrationNeeded() -> Bool {
+        do {
+            let sourceMetadata = try self.sourceMetadata()
+            let destinationModel = self.getManagedObjectModel()
+            let isMigrationNeeded = !destinationModel.isConfiguration(withName: nil, compatibleWithStoreMetadata: sourceMetadata)
+            print("isMigrationNeeded - \(isMigrationNeeded)")
+            return isMigrationNeeded
+        } catch {
+            print("Get metadata error: \(error)")
+            return false
+        }
+    }
+    
     // MARK: Private methods
+    
+    private func getManagedObjectModel() -> NSManagedObjectModel {
+        var modelURL = Bundle.main.url(forResource: modelName, withExtension: "momd")
+        if (modelURL == nil) {
+            modelURL = Bundle.main.url(forResource: modelName, withExtension: "mom")
+        }
+        guard let url = modelURL else {
+            fatalError("Unable to Find Data Model")
+        }
+        
+        guard let model = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Unable to Load Data Model")
+        }
+        return model
+    }
+    
+
+
     
     private func addObtainPermanentIDsBeforeSaving(context: NSManagedObjectContext) {
         NotificationCenter.default.addObserver(self,
@@ -235,6 +277,34 @@ class SBCoreDataManager: SBCoreDataService {
         context.parent = rootContext
         addObtainPermanentIDsBeforeSaving(context: context)
         return context
+    }
+    
+    private func sourceStoreURL() -> URL {
+      let storeName = "\(modelName).sqlite"
+      
+      // для использования одним инстансом
+      let path = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
+
+      // для использования группой
+      //        guard let path = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.ru.sbsoft.habar") else {
+      //            fatalError("Unavable group container")
+      //        }
+
+      return path.appendingPathComponent(storeName)
+    }
+    
+    private func sourceStoreType() -> String {
+        return NSSQLiteStoreType
+    }
+    
+    private func sourceMetadata() throws -> [String : Any] {
+        return try NSPersistentStoreCoordinator.metadataForPersistentStore(ofType: self.sourceStoreType(), at: self.sourceStoreURL(), options: nil)
+    }
+    
+    // MARK: HBMigrationManagerDelegate
+    
+    func migrationManager(_ migrationManager: HBMigrationManager, migrationProgress: Float) {
+        print("Migrate - \(migrationProgress)")
     }
     
     // MARK: Notification handler

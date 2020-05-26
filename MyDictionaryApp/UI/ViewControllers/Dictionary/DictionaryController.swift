@@ -52,11 +52,18 @@ class DictionaryController: UITableViewController, ServicesAssembly {
     }
         
     // MARK: - UITableViewDataSource
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return presenter.getNumberSections()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           return presenter.getCountInSection(section)
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return presenter.getTitleSection(section)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: DictionaryCell.identifier, for: indexPath) as! DictionaryCell
@@ -94,6 +101,10 @@ class DictionaryController: UITableViewController, ServicesAssembly {
             }
         }
         return [deleteAction, otherAction]
+    }
+    
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return presenter.sectionIndexTitles()
     }
  
     // MARK: - UITableViewDelegate
@@ -136,6 +147,14 @@ extension DictionaryController: DictionaryView {
     
     func reloadData() {
         tableView.reloadData()
+    }
+    
+    func insertSection(at sectionIndex: Int) {
+        tableView.insertSections(IndexSet(integer: sectionIndex), with: .fade)
+    }
+    
+    func deleteSection(at sectionIndex: Int) {
+        tableView.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
     }
     
     func insertRow(at indexPath: IndexPath) {

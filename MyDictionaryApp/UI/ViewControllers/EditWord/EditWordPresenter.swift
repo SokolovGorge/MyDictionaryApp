@@ -11,7 +11,7 @@ import UIKit
 protocol EditWordPresenter {
     
     func setWordEntity(_ wordEntity: NativeWordEntity?)
-    func saveData()
+    func saveData() -> Bool
     func checkDataState()
     
 }
@@ -41,7 +41,7 @@ protocol EditWordView: BaseViewProtocol {
     func setTranslateValue(_ value: String?, index: Int)
 }
 
-class EditWordPresenterImp: NSObject, EditWordPresenter {
+class EditWordPresenterImp: NSObject, EditWordPresenter, ServicesAssembly {
     
     private var flagNeedRolback = true
     private var wordEntity: NativeWordEntity?
@@ -62,16 +62,21 @@ class EditWordPresenterImp: NSObject, EditWordPresenter {
         return value != nil && value!.trimmingCharacters(in: .whitespacesAndNewlines).count > 0
     }
     
-    func saveData() {
+    func saveData() -> Bool {
         if checkValidData() {
+            if dictionaryService.isExistsWord(view.getWordValue()!.lowercased(), id: (wordEntity != nil) ? wordEntity!.objectID : nil) {
+                view.showAlertIn(withTitle: "Внимание", message: "Данное слово уже содержится в словаре!", firstButtonTitle: "Ok", otherButtonTitle: nil, tapBlock: nil)
+                return false
+            }
             writeData()
-  //          view.dismiss(animated: true, completion: nil)
+            return true
         }
+        return false
     }
     
     func checkDataState() {
         if flagNeedRolback {
-            SBCoreDataManager.sharedInstance.rollbackMainTemplateContext()
+            SBCoreDataManager.shared.rollbackMainTemplateContext()
         }
     }
     
@@ -123,10 +128,11 @@ class EditWordPresenterImp: NSObject, EditWordPresenter {
 
     private func writeData() {
         if wordEntity == nil {
-            wordEntity = NativeWordEntity(context: SBCoreDataManager.sharedInstance.mainTemplateContext())
+            wordEntity = NativeWordEntity(context: SBCoreDataManager.shared.mainTemplateContext())
             wordEntity?.datecreate = Date()
         }
         wordEntity?.word = view.getWordValue()?.lowercased()
+        wordEntity?.section = String((wordEntity?.word?.prefix(1))!)
         wordEntity?.transcription = view.getTranscriptValue()
         wordEntity?.associate = view.getAssociationValue()
         wordEntity?.translates = nil
@@ -142,7 +148,7 @@ class EditWordPresenterImp: NSObject, EditWordPresenter {
         addTranslateValue(view.getTranslateValue9(), to: wordEntity!, &index)
         addTranslateValue(view.getTranslateValue10(), to: wordEntity!, &index)
         //
-        let (_, error) = SBCoreDataManager.sharedInstance.saveMainTemplateContext()
+        let (_, error) = SBCoreDataManager.shared.saveMainTemplateContext()
         if let error = error {
             print("Ошибка сохранения данных: \(error.localizedDescription)")
         }
@@ -151,7 +157,7 @@ class EditWordPresenterImp: NSObject, EditWordPresenter {
     
     private func addTranslateValue(_ translateValue: String?, to wordEntity: NativeWordEntity, _ index: inout Int16) {
         if isValidValue(translateValue) {
-            let translateEntity1 = TranslateWordEntity(context: SBCoreDataManager.sharedInstance.mainTemplateContext())
+            let translateEntity1 = TranslateWordEntity(context: SBCoreDataManager.shared.mainTemplateContext())
             translateEntity1.index = index
             translateEntity1.translate = translateValue!.trimmingCharacters(in: .whitespacesAndNewlines)
             translateEntity1.native = wordEntity

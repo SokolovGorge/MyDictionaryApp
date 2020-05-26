@@ -29,6 +29,7 @@
 		151D64E4242106D400132F05 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 151D64E0242106D400132F05 /* Sparkle.png */; };
 		151D64E624212E0E00132F05 /* TrainingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64E524212E0E00132F05 /* TrainingPresenter.swift */; };
 		151D64E82421368D00132F05 /* TrainingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151D64E72421368D00132F05 /* TrainingAssembly.swift */; };
+		152F397D24464D0F00F99503 /* SBMigrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152F397C24464D0F00F99503 /* SBMigrationManager.swift */; };
 		153CE3C923FC775B00E247E9 /* EditWordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CE3C823FC775B00E247E9 /* EditWordPresenter.swift */; };
 		153CE3CB23FC777D00E247E9 /* EditWordAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153CE3CA23FC777D00E247E9 /* EditWordAssembly.swift */; };
 		154B947223F055350092E36E /* DictionaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154B947123F055350092E36E /* DictionaryService.swift */; };
@@ -49,6 +50,7 @@
 		15B9084223E35EDD00CB8A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B9084123E35EDD00CB8A35 /* AppDelegate.swift */; };
 		15B9084D23E35EDD00CB8A35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15B9084C23E35EDD00CB8A35 /* Assets.xcassets */; };
 		15B9085B23E35EDD00CB8A35 /* MyDictionaryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B9085A23E35EDD00CB8A35 /* MyDictionaryAppTests.swift */; };
+		15BA3A35243A581D006BDAD5 /* Model1_to_Model2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 15BA3A34243A581D006BDAD5 /* Model1_to_Model2.xcmappingmodel */; };
 		15BD950323E740AE000CBA4E /* UIAlertController+SBUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950123E740AE000CBA4E /* UIAlertController+SBUtils.swift */; };
 		15BD950423E740AE000CBA4E /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950223E740AE000CBA4E /* UIViewController+Alert.swift */; };
 		15BD950923E74137000CBA4E /* SBCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BD950523E74137000CBA4E /* SBCoreDataService.swift */; };
@@ -64,6 +66,7 @@
 		15E302A123F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029D23F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift */; };
 		15E302A223F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029E23F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift */; };
 		15E302A323F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E3029F23F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift */; };
+		15F8247C2468347C0067959D /* HBMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 15F8247B2468347C0067959D /* HBMigrationManager.m */; };
 		15FCA48C2416A6E700AACF67 /* TrainingSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA48B2416A6E700AACF67 /* TrainingSettingsController.swift */; };
 		15FCA48E2416B4DF00AACF67 /* TrainingSettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA48D2416B4DF00AACF67 /* TrainingSettingsAssembly.swift */; };
 		15FCA4902416C1E400AACF67 /* TrainingSettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCA48F2416C1E400AACF67 /* TrainingSettingsPresenter.swift */; };
@@ -107,6 +110,7 @@
 		151D64E0242106D400132F05 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
 		151D64E524212E0E00132F05 /* TrainingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPresenter.swift; sourceTree = "<group>"; };
 		151D64E72421368D00132F05 /* TrainingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAssembly.swift; sourceTree = "<group>"; };
+		152F397C24464D0F00F99503 /* SBMigrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBMigrationManager.swift; sourceTree = "<group>"; };
 		153CE3C823FC775B00E247E9 /* EditWordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWordPresenter.swift; sourceTree = "<group>"; };
 		153CE3CA23FC777D00E247E9 /* EditWordAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditWordAssembly.swift; sourceTree = "<group>"; };
 		154B947123F055350092E36E /* DictionaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryService.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		154B947523F056AE0092E36E /* ServicesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMap.swift; sourceTree = "<group>"; };
 		154B947723F058230092E36E /* ServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		1552213823EB445F00A2B5FE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1556F1AC24649D1E0027A486 /* MyDictionaryApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyDictionaryApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		155D1A1424084A220076C979 /* ParentPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentPresenterDelegate.swift; sourceTree = "<group>"; };
 		155D1A1624084A7A0076C979 /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		155F902523F02BAD00A3FD61 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -131,6 +136,8 @@
 		15B9085623E35EDD00CB8A35 /* MyDictionaryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDictionaryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15B9085A23E35EDD00CB8A35 /* MyDictionaryAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDictionaryAppTests.swift; sourceTree = "<group>"; };
 		15B9085C23E35EDD00CB8A35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BA3A33243A5630006BDAD5 /* MyDictionaryApp 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "MyDictionaryApp 2.xcdatamodel"; sourceTree = "<group>"; };
+		15BA3A34243A581D006BDAD5 /* Model1_to_Model2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model1_to_Model2.xcmappingmodel; sourceTree = "<group>"; };
 		15BD950123E740AE000CBA4E /* UIAlertController+SBUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SBUtils.swift"; sourceTree = "<group>"; };
 		15BD950223E740AE000CBA4E /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		15BD950523E74137000CBA4E /* SBCoreDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBCoreDataService.swift; sourceTree = "<group>"; };
@@ -146,6 +153,8 @@
 		15E3029D23F0531C0047993D /* NativeWordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NativeWordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		15E3029E23F0531C0047993D /* TranslateWordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslateWordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		15E3029F23F0531C0047993D /* TranslateWordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslateWordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		15F8247A2468347B0067959D /* HBMigrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBMigrationManager.h; sourceTree = "<group>"; };
+		15F8247B2468347C0067959D /* HBMigrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBMigrationManager.m; sourceTree = "<group>"; };
 		15FCA48B2416A6E700AACF67 /* TrainingSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsController.swift; sourceTree = "<group>"; };
 		15FCA48D2416B4DF00AACF67 /* TrainingSettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsAssembly.swift; sourceTree = "<group>"; };
 		15FCA48F2416C1E400AACF67 /* TrainingSettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSettingsPresenter.swift; sourceTree = "<group>"; };
@@ -365,12 +374,17 @@
 		15BD94FE23E74009000CBA4E /* DOM */ = {
 			isa = PBXGroup;
 			children = (
+				15F8247A2468347B0067959D /* HBMigrationManager.h */,
+				15F8247B2468347C0067959D /* HBMigrationManager.m */,
 				15BD950623E74137000CBA4E /* NSManagedObject+SBCoreStack.swift */,
 				15BD950823E74137000CBA4E /* NSManagedObjectContext+SBCoreStack.swift */,
 				15BD950723E74137000CBA4E /* SBCoreDataManager.swift */,
 				15BD950523E74137000CBA4E /* SBCoreDataService.swift */,
 				15BD950D23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld */,
 				15BD94FF23E7401B000CBA4E /* Entities */,
+				15BA3A34243A581D006BDAD5 /* Model1_to_Model2.xcmappingmodel */,
+				152F397C24464D0F00F99503 /* SBMigrationManager.swift */,
+				1556F1AC24649D1E0027A486 /* MyDictionaryApp-Bridging-Header.h */,
 			);
 			path = DOM;
 			sourceTree = "<group>";
@@ -511,6 +525,7 @@
 				TargetAttributes = {
 					15B9083D23E35EDD00CB8A35 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1140;
 					};
 					15B9085523E35EDD00CB8A35 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -677,6 +692,7 @@
 				15BD950A23E74137000CBA4E /* NSManagedObject+SBCoreStack.swift in Sources */,
 				15BD950323E740AE000CBA4E /* UIAlertController+SBUtils.swift in Sources */,
 				151D64E624212E0E00132F05 /* TrainingPresenter.swift in Sources */,
+				15BA3A35243A581D006BDAD5 /* Model1_to_Model2.xcmappingmodel in Sources */,
 				15FCA48E2416B4DF00AACF67 /* TrainingSettingsAssembly.swift in Sources */,
 				151D64D6242106C600132F05 /* LTMorphingLabel+Burn.swift in Sources */,
 				15BD950B23E74137000CBA4E /* SBCoreDataManager.swift in Sources */,
@@ -685,6 +701,7 @@
 				151D64E82421368D00132F05 /* TrainingAssembly.swift in Sources */,
 				15C2896D23F32CAA005EF523 /* DictionaryController.swift in Sources */,
 				15BD950F23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld in Sources */,
+				15F8247C2468347C0067959D /* HBMigrationManager.m in Sources */,
 				154B947623F056AE0092E36E /* ServicesMap.swift in Sources */,
 				15FCA48C2416A6E700AACF67 /* TrainingSettingsController.swift in Sources */,
 				151D64D2242106C600132F05 /* LTCharacterLimbo.swift in Sources */,
@@ -720,6 +737,7 @@
 				151D64D9242106C600132F05 /* LTMorphingEffect.swift in Sources */,
 				155F902623F02BAD00A3FD61 /* AppConstants.swift in Sources */,
 				15E302A023F0531C0047993D /* NativeWordEntity+CoreDataClass.swift in Sources */,
+				152F397D24464D0F00F99503 /* SBMigrationManager.swift in Sources */,
 				15AA9E4024181EC900507D1B /* UserDefaultManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,6 +894,7 @@
 			baseConfigurationReference = 523B45D264600A69E34576CA /* Pods-MyDictionaryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XS2NM2CT2U;
 				INFOPLIST_FILE = MyDictionaryApp/SupportingFiles/Info.plist;
@@ -884,9 +903,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D AUTOMIGRATION";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sbsoft.MyDictionaryApp;
 				PRODUCT_NAME = "Мой словарь";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyDictionaryApp/DOM/MyDictionaryApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -897,6 +918,7 @@
 			baseConfigurationReference = 39A55BD4F80C7E4322CFFFDB /* Pods-MyDictionaryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XS2NM2CT2U;
 				INFOPLIST_FILE = MyDictionaryApp/SupportingFiles/Info.plist;
@@ -905,9 +927,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D AUTOMIGRATION";
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sbsoft.MyDictionaryApp;
 				PRODUCT_NAME = "Мой словарь";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyDictionaryApp/DOM/MyDictionaryApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -995,9 +1018,10 @@
 		15BD950D23E74220000CBA4E /* MyDictionaryApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				15BA3A33243A5630006BDAD5 /* MyDictionaryApp 2.xcdatamodel */,
 				15BD950E23E74220000CBA4E /* MyDictionaryApp.xcdatamodel */,
 			);
-			currentVersion = 15BD950E23E74220000CBA4E /* MyDictionaryApp.xcdatamodel */;
+			currentVersion = 15BA3A33243A5630006BDAD5 /* MyDictionaryApp 2.xcdatamodel */;
 			path = MyDictionaryApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
